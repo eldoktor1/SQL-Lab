@@ -1,4 +1,6 @@
+
 SQL Query Filters ✨🔍
+
 This repository contains a collection of SQL queries that demonstrate the application of filters for enhanced security and targeted data retrieval. The queries cover various scenarios such as filtering failed login attempts, investigating specific dates, identifying foreign login attempts, and retrieving employee information.
 
 Examples 📚
