@@ -11,7 +11,7 @@ logical filters, time-based conditions, and pattern matching.
 
 Filtered for failed login attempts occurring after business hours (6:00 PM).
 
-![After Hours Failed Login](https://raw.githubusercontent.com/eldoktor1/SQL-Query-Filters/main/sql_filters_images/sql_page_1_img_1.png)
+![After Hours Failed Login](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_1_img_1.png)
 
     SELECT * FROM log_in_attempts
     WHERE login_time > '18:00'
@@ -23,13 +23,13 @@ Filtered for failed login attempts occurring after business hours (6:00 PM).
 
 Queried for login attempts on May 8th and May 9th, 2022.
 
-![Query Date Filtering](https://raw.githubusercontent.com/eldoktor1/SQL-Query-Filters/main/sql_filters_images/sql_page_2_img_1.png)
+![Query Date Filtering](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_2_img_1.png)
 
     SELECT * FROM log_in_attempts
     WHERE login_date = '2022-05-08'
        OR login_date = '2022-05-09';
 
-![Result Sample](https://raw.githubusercontent.com/eldoktor1/SQL-Query-Filters/main/sql_filters_images/sql_page_2_img_2.png)
+![Result Sample](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_2_img_2.png)
 
 ---
 
@@ -37,7 +37,7 @@ Queried for login attempts on May 8th and May 9th, 2022.
 
 Filtered records where the login country is not Mexico.
 
-![Not Mexico Filter](https://raw.githubusercontent.com/eldoktor1/SQL-Query-Filters/main/sql_filters_images/sql_page_3_img_1.png)
+![Not Mexico Filter](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_3_img_1.png)
 
     SELECT * FROM log_in_attempts
     WHERE country NOT LIKE 'MEX%';
@@ -48,7 +48,7 @@ Filtered records where the login country is not Mexico.
 
 Queried only employees from the Marketing department in East offices.
 
-![Marketing East Office](https://raw.githubusercontent.com/eldoktor1/SQL-Query-Filters/main/sql_filters_images/sql_page_4_img_1.png)
+![Marketing East Office](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_4_img_1.png)
 
     SELECT * FROM employees
     WHERE department = 'Marketing'
@@ -60,7 +60,7 @@ Queried only employees from the Marketing department in East offices.
 
 Targeted systems tied to either Finance or Sales employees.
 
-![Finance or Sales](https://raw.githubusercontent.com/eldoktor1/SQL-Query-Filters/main/sql_filters_images/sql_page_4_img_2.png)
+![Finance or Sales](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_4_img_2.png)
 
     SELECT * FROM employees
     WHERE department = 'Finance'
