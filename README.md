@@ -1,34 +1,80 @@
+# SQL Query Filters
 
-SQL Query Filters ✨🔍
+**Project Description**  
+This project showcases how I used SQL queries to investigate login activity 
+and isolate department-specific data during a system audit. The queries include 
+logical filters, time-based conditions, and pattern matching.
 
-This repository contains a collection of SQL queries that demonstrate the application of filters for enhanced security and targeted data retrieval. The queries cover various scenarios such as filtering failed login attempts, investigating specific dates, identifying foreign login attempts, and retrieving employee information.
+---
 
-Examples 📚
-Retrieve after hours failed login attempts: Filter for failed login attempts that occurred after business hours ⏰.
+## 🔐 After-Hours Failed Login Attempts
 
-Retrieve login attempts on specific dates: Investigate login activity on specific dates or the day before 📅.
+Filtered for failed login attempts occurring after business hours (6:00 PM).
 
-Retrieve login attempts outside of Mexico: Identify login attempts from countries other than Mexico 🌍.
+![After Hours Failed Login](https://raw.githubusercontent.com/eldoktor1/SQL-Query-Filters/main/sql_filters_images/sql_page_1_img_1.png)
 
-Retrieve employees in Marketing: Get information on employee machines in the Marketing department 💼.
+    SELECT * FROM log_in_attempts
+    WHERE login_time > '18:00'
+      AND success = FALSE;
 
-Retrieve employees in Finance or Sales: Obtain employee machine information from the Finance and Sales departments 💰.
+---
 
-Retrieve all employees not in IT: Gather information on employees not in the Information Technology department 🚫💻.
+## 📅 Logins on Specific Dates
 
-These examples showcase the usage of SQL filters with WHERE clauses, logical operators (AND, OR, NOT), and wildcards (LIKE) for targeted data extraction.
+Queried for login attempts on May 8th and May 9th, 2022.
 
-Usage 🚀
-Clone the repository: git clone https://github.com/eldoktor1/sql-query-filters.git 📥
+![Query Date Filtering](https://raw.githubusercontent.com/eldoktor1/SQL-Query-Filters/main/sql_filters_images/sql_page_2_img_1.png)
 
-Open the desired SQL query file in your preferred database management tool 💻.
+    SELECT * FROM log_in_attempts
+    WHERE login_date = '2022-05-08'
+       OR login_date = '2022-05-09';
 
-Modify the queries as needed to suit your specific database schema and requirements 🛠️.
+![Result Sample](https://raw.githubusercontent.com/eldoktor1/SQL-Query-Filters/main/sql_filters_images/sql_page_2_img_2.png)
 
-Execute the queries and observe the results for the desired data extraction ✨.
+---
 
-Contribution 🤝
-Contributions to this repository are welcome. If you have additional SQL query examples or improvements to the existing queries, feel free to submit a pull request 📥.
+## 🌍 Logins Outside Mexico
 
-License 📝
-This repository is licensed under the MIT License. Feel free to use, modify, and distribute the provided SQL queries as per the terms of the license 📜.
+Filtered records where the login country is not Mexico.
+
+![Not Mexico Filter](https://raw.githubusercontent.com/eldoktor1/SQL-Query-Filters/main/sql_filters_images/sql_page_3_img_1.png)
+
+    SELECT * FROM log_in_attempts
+    WHERE country NOT LIKE 'MEX%';
+
+---
+
+## 🧑‍💼 Marketing Team in East Office
+
+Queried only employees from the Marketing department in East offices.
+
+![Marketing East Office](https://raw.githubusercontent.com/eldoktor1/SQL-Query-Filters/main/sql_filters_images/sql_page_4_img_1.png)
+
+    SELECT * FROM employees
+    WHERE department = 'Marketing'
+      AND office LIKE 'East%';
+
+---
+
+## 💼 Finance or Sales Departments
+
+Targeted systems tied to either Finance or Sales employees.
+
+![Finance or Sales](https://raw.githubusercontent.com/eldoktor1/SQL-Query-Filters/main/sql_filters_images/sql_page_4_img_2.png)
+
+    SELECT * FROM employees
+    WHERE department = 'Finance'
+       OR department = 'Sales';
+
+---
+
+## ✅ Summary
+
+- Used `SELECT` with `WHERE`, `AND`, `OR`, `NOT`, and `LIKE` filters  
+- Analyzed time, date, location, and department-based conditions  
+- Returned filtered results for investigative and maintenance purposes
+
+---
+
+**Author:** Mina Abskhron  
+**GitHub:** [@eldoktor1](https://github.com/eldoktor1)
