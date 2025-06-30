@@ -38,7 +38,7 @@ Queried for login attempts on May 8th and May 9th, 2022.
 Filtered records where the login country is not Mexico.
 ![Result Sample](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_2_img_2.png)
 
-![Not Mexico Filter](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_3_img_1.png)
+
 
     SELECT * FROM log_in_attempts
     WHERE country NOT LIKE 'MEX%';
