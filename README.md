@@ -36,6 +36,7 @@ Queried for login attempts on May 8th and May 9th, 2022.
 ## 🌍 Logins Outside Mexico
 
 Filtered records where the login country is not Mexico.
+![Result Sample](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_2_img_2.png)
 
 ![Not Mexico Filter](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_3_img_1.png)
 
@@ -47,8 +48,9 @@ Filtered records where the login country is not Mexico.
 ## 🧑‍💼 Marketing Team in East Office
 
 Queried only employees from the Marketing department in East offices.
+![Not Mexico Filter](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_3_img_1.png)
 
-![Marketing East Office](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_4_img_1.png)
+
 
     SELECT * FROM employees
     WHERE department = 'Marketing'
@@ -59,6 +61,7 @@ Queried only employees from the Marketing department in East offices.
 ## 💼 Finance or Sales Departments
 
 Targeted systems tied to either Finance or Sales employees.
+![Marketing East Office](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_4_img_1.png)
 
 ![Finance or Sales](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_4_img_2.png)
 
