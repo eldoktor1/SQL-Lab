@@ -63,6 +63,7 @@ Queried only employees from the Marketing department in East offices.
 Targeted systems tied to either Finance or Sales employees.
 ![Marketing East Office](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_4_img_1.png)
 
+Targeted systems tied to all non Information Technology employees.
 ![Finance or Sales](https://raw.githubusercontent.com/eldoktor1/SQL-Lab/main/sql_filters_images/sql_page_4_img_2.png)
 
     SELECT * FROM employees
